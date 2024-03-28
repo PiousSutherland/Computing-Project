@@ -6,18 +6,11 @@
 	$newBookingItem = '';
 	if(isset($_SESSION['user'])){
 	$newBookingItem = '<a href="bookingForm.php"><p>Enter another booking</p></a>';
-	}else{
-	$newBookingItem = '';
 	}
-
 	
-	
-	
-	
-	
-	?>
+?>
 	<div id='content' style='text-align:center;' >
-		<p><strong>Booking Successful!</strong></p><br/><br/>
+		<p><strong>Booking Successful!</strong></p><br><br>
 		
 		<?php
 		

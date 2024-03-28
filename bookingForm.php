@@ -6,23 +6,23 @@
 	$error = '';
 	
 	if(isset($_POST['submitted'])) {
-		$Title=mysqli_real_escape_string($db, trim($_POST['Title']));
-		$Name=mysqli_real_escape_string($db, trim($_POST['Name']));
-		$Surname=mysqli_real_escape_string($db, trim($_POST['Surname']));		
-		$Address1=mysqli_real_escape_string($db, trim($_POST['Address1']));
-		$Address2=mysqli_real_escape_string($db, trim($_POST['Address2']));
-		$Address3=mysqli_real_escape_string($db, trim($_POST['Address3']));
-		$Address4=mysqli_real_escape_string($db, trim($_POST['Address4']));
-		$PostCode=mysqli_real_escape_string($db, trim($_POST['PostCode']));
-		$PhoneNum=mysqli_real_escape_string($db, trim($_POST['PhoneNum']));
-		$Email=mysqli_real_escape_string($db, trim($_POST['Email']));
+		$Title=mysqli_real_esc_str('Title');
+		$Name=mysqli_real_esc_str('Name');
+		$Surname=mysqli_real_esc_str('Surname');		
+		$Address1=mysqli_real_esc_str('Address1');
+		$Address2=mysqli_real_esc_str('Address2');
+		$Address3=mysqli_real_esc_str('Address3');
+		$Address4=mysqli_real_esc_str('Address4');
+		$PostCode=mysqli_real_esc_str('PostCode');
+		$PhoneNum=mysqli_real_esc_str('PhoneNum');
+		$Email=mysqli_real_esc_str('Email');
 		
-		$Date=mysqli_real_escape_string($db, trim($_POST['Date']));
-		$TimeStart=mysqli_real_escape_string($db, trim($_POST['TimeStart']));
-		$TimeFinish=mysqli_real_escape_string($db, trim($_POST['TimeFinish']));
-		$BookingType=mysqli_real_escape_string($db, trim($_POST['BookingType']));
-		$Rooms=mysqli_real_escape_string($db, trim($_POST['Rooms']));
-		$EquipmentNotes=mysqli_real_escape_string($db, trim($_POST['EquipmentNotes']));
+		$Date=mysqli_real_esc_str('Date');
+		$TimeStart=mysqli_real_esc_str('TimeStart');
+		$TimeFinish=mysqli_real_esc_str('TimeFinish');
+		$BookingType=mysqli_real_esc_str('BookingType');
+		$Rooms=mysqli_real_esc_str('Rooms');
+		$EquipmentNotes=mysqli_real_esc_str('EquipmentNotes');
 		
 		session_start();
 		$UserID = empty($_SESSION['userid']) ? 4 : $_SESSION['userid'];

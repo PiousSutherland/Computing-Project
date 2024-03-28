@@ -6,10 +6,10 @@
 	$error = '';
 	
 	if(isset($_POST['submitted'])) {
-		$Username=mysqli_real_escape_string($db, trim($_POST['Username']));
-		$Surname=mysqli_real_escape_string($db, trim($_POST['Surname']));
-		$email=mysqli_real_escape_string($db, trim($_POST['email']));		
-		$password=mysqli_real_escape_string($db, trim($_POST['password']));
+		$Username=mysqli_real_esc_str('Username');
+		$Surname=mysqli_real_esc_str('Surname');
+		$email=mysqli_real_esc_str('email');		
+		$password=mysqli_real_esc_str('password');
 		
 		if(!empty($Username) && !empty($Surname) && !empty($email) && !empty($password)){
 			$result = mysqli_query($db,"insert into `users` set `name` ='$Username', `surname` ='$Surname', `email`='$email', `password` = MD5('$password') ");
@@ -23,7 +23,7 @@
 		}
 	}
 	if(!empty($error)){
-		echo "<div class='error' >$error</div>";
+		echo "<div class='error'>$error</div>";
 	}
 	?>
 	
