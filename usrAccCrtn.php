@@ -1,7 +1,7 @@
 <?php
-	include_once('db/db.php');
+	include_once('db.php');
 	include_once('header.html');
-	include_once('reducedMenu.php');
+	include_once('reducedMenu.html');
 	
 	$error = '';
 	
@@ -30,12 +30,12 @@
 	<div id='content' >
 		<h3>Registration</h3>
 		<form action='' method='POST' >
-		Name&nbsp;<input type='text' name='Username'/><br/>
-		Surname&nbsp;<input type='text' name='Surname'/><br/>
-		Email&nbsp;<input type='text' name='email' /><br/>
-		Password&nbsp;<input type='password' name='password' /><br/>
+		Name&nbsp;<input type='text' name='Username'><br>
+		Surname&nbsp;<input type='text' name='Surname'><br>
+		Email&nbsp;<input type='text' name='email' ><br>
+		Password&nbsp;<input type='password' name='password'><br>
 		
-		<input type='hidden' name='submitted' value='true' />
-		<input type='submit' value='Register'/>
+		<input type='hidden' name='submitted' value='true'>
+		<input type='submit' value='Register'>
 		</form>
 	</div>

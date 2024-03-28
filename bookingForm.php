@@ -1,7 +1,7 @@
 <?php
 	include_once("header.html");
-	include_once("reducedMenu.php");
-	include_once("db/db.php");
+	include_once("reducedMenu.html");
+	include_once("db.php");
 	
 	$error = '';
 	
@@ -166,7 +166,7 @@
 		<b>Date</b>&nbsp;<input type='date' name='Date' /><br/>
 		<b>Start Time</b>&nbsp;<select name='TimeStart'>
 							<option value="">-- Please Choose</option>
-							<option <?php if (!empty($_POST['TimeStart']) && ($_POST["TimeStart"] == "09:00")) { ?>selected="true"<?php } ?> value='09:00' >09:00</option>
+							<option <?php if (!empty($_POST['TimeStart']) && ($_POST["TimeStart"] == "09:00")) { ?>selected="true"<?php } ?>value='09:00'>09:00</option>
 							<option <?php if (!empty($_POST['TimeStart']) && ($_POST["TimeStart"] == "09:30")) { ?>selected="true"<?php } ?>value='09:30'>09:30</option>
 							<option <?php if (!empty($_POST['TimeStart']) && ($_POST["TimeStart"] == "10:00")) { ?>selected="true"<?php } ?>value='10:00'>10:00</option>
 							<option <?php if (!empty($_POST['TimeStart']) && ($_POST["TimeStart"] == "10:30")) { ?>selected="true"<?php } ?>value='10:30'>10:30</option>

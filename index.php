@@ -1,17 +1,17 @@
 <?php
 	require_once("header.html");
 	require_once("menu.php");
-	require_once("db/db.php");
+	require_once("db.php");
 	
 	$makeBookingLinkItem = '';
 	if(isset($_SESSION['user'])){
-	$makeBookingLinkItem = '<a href="bookingForm.php" ><p>Make a Booking</p><a/>';
+	$makeBookingLinkItem = '<a href="bookingForm.php"><p>Make a Booking</p></a>';
 	}else{
 	$makeBookingLinkItem = '';
 	}
-	
+
 	$currentDate = date('Y-m-d');
-	$CalDate = mysql_real_escape_string($currentDate);
+	$CalDate = mysqli_real_escape_string($db, $currentDate);
 	//echo $CalDate, PHP_EOL;
 	
 	if(isset($_POST['submitted'])) {
@@ -68,7 +68,7 @@
 	$values[] = $CalDate;
 	
 	// print_r($query); print_r($values);
-	echo "<br/>"; print_r(call_user_func_array('sprintf', $values));
+	echo "<br>"; print_r(call_user_func_array('sprintf', $values));
 
 	
 	// $resultUPDATE = mysqli_query($db, 'UPDATE `days` SET `$TimeStart`="$bookingid", `$TimeFinish`="$bookingid" WHERE `Date`="2015-03-29"');
@@ -159,7 +159,7 @@
 								<div class='BookingContent' id='BookingContentMain' >
 									<div class='ContentBackground'>
 										<div class='ContentTxt' id='BackingContentTxt' >
-											<p>Bookings can be made in half-hour timeslots.<br/>Bookings can currently be only made for the Main Hall (The current hall).</p>
+											<p>Bookings can be made in half-hour timeslots.<br>Bookings can currently be only made for the Main Hall (The current hall).</p>
 											
 										<!---Next part will change depending on selection so will be within php script
 										
@@ -175,14 +175,14 @@
 													<div id='DateInput'>
 														Use date format YYYY-MM-DD
 														<form action='' method='POST'>
-															Input date to view bookings:&nbsp;<input type='date' name='newDate' />
-															<input type='hidden' name='submitted' value='true' />
-															<input type='submit' value='Go'/>
+															Input date to view bookings:&nbsp;<input type='date' name='newDate'>
+															<input type='hidden' name='submitted' value='true'>
+															<input type='submit' value='Go'>
 														</form>
 													</div>
 													
 													
-													<caption><h4>Bookings for: <?php echo $CalDate;?></h4><br/></caption>
+													<caption><h4>Bookings for: <?php echo $CalDate;?></h4><br></caption>
 													
 											<!--Calendar-->
 													<tr>

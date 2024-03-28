@@ -1,7 +1,7 @@
 <?php
 	include_once("header.html");
-	include_once("reducedMenu.php");
-	require_once("db/db.php");
+	include_once("reducedMenu.html");
+	require_once("db.php");
 
 	$newBookingItem = '';
 	if(isset($_SESSION['user'])){

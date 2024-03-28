@@ -1,9 +1,6 @@
 <?php
-if(isset($_SESSION['user'])) {
-
-}else{
-session_start();
-}
+if (!(isset($_SESSION['user'])))
+	session_start();
 
 $loginItem = '';
 if(isset($_SESSION['user'])){
@@ -69,7 +66,7 @@ $loginItem = '<a href="login.php"><div class="LoginBtn" >Login</div></a>';
 					<div class='BtnTxt' id='BtnTxtLoginout' >
 						<?php
 						
-						echo "$loginItem";
+						echo $loginItem;
 							?>
 					</div>
 				</div>
