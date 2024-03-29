@@ -7,6 +7,7 @@ function time_option_loop(string $timeStartOrFinish)
     // This will start off as '9:00' in the loop
     $hour = 8;
 
+    // 9:00 -> 22:30 is 28 intervals
     for ($i = 0; $i < 28; $i++) {
         // Reset
         $mins = ':00';
@@ -17,9 +18,10 @@ function time_option_loop(string $timeStartOrFinish)
         else
             $hour++;
 
-        $time = $hour . $mins;
+        // Add '0' in front of 9 where needed
+        $time = str_pad($hour, 2, '0', STR_PAD_LEFT) . $mins;
 
-        $selected = ($_POST[$timeStartOrFinish] == $time) ? " selected" : '';
+        $selected = (!empty($_POST[$timeStartOrFinish]) && $_POST[$timeStartOrFinish] == $time) ? " selected" : '';
 
         // Push to options
         $options .= "<option$selected value='$time'>$time</option>";
