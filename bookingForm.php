@@ -103,7 +103,7 @@
 							$values[] = $Date;
 							
 							// print_r($query); print_r($values);
-							// echo "<br/>"; print_r(call_user_func_array('sprintf', $values));
+							// echo "<br>"; print_r(call_user_func_array('sprintf', $values));
 
 							
 							// $resultUPDATE = mysqli_query($db, 'UPDATE `days` SET `$TimeStart`="$bookingid", `$TimeFinish`="$bookingid" WHERE `Date`="2015-03-29"');
@@ -139,31 +139,31 @@
 							<option <?php if (!empty($_POST['Title']) && ($_POST["Title"] == "Miss")) { ?>selected="true"<?php } ?> value='Miss'>Miss</option>
 							<option <?php if (!empty($_POST['Title']) && ($_POST["Title"] == "Mrs")) { ?>selected="true"<?php } ?>value='Mrs'>Mrs</option>
 							<option <?php if (!empty($_POST['Title']) && ($_POST["Title"] == "Mr")) { ?>selected="true"<?php } ?>value='Mr'>Mr</option>
-						</select><br/>
+						</select><br>
 		<b>Name</b>&nbsp;<input type='text' name='Name' <?php if (!empty($_POST['Name'])) { ?>value="<?php echo $_POST['Name'];?>"<?php } ?>/>
-						<br/>					
+						<br>					
 		<b>Surname</b>&nbsp;<input type='text' name='Surname' <?php if (!empty($_POST['Surname'])) { ?>value="<?php echo $_POST['Surname'];?>"<?php } ?>/>
-						<br/>
-		<b>Address</b>&nbsp;	<br/>
+						<br>
+		<b>Address</b>&nbsp;	<br>
 								&nbsp;&nbsp;<small>Line 1</small>&nbsp;<input type='text' name='Address1' size='100' <?php if (!empty($_POST['Address1'])) { ?>value="<?php echo $_POST['Address1'];?>"<?php } ?>/>
-								<br/>
+								<br>
 								&nbsp;&nbsp;<small>Line 2</small>&nbsp;<input type='text' name='Address2' size='100' <?php if (!empty($_POST['Address2'])) { ?>value="<?php echo $_POST['Address2'];?>"<?php } ?>/>
-								<br/>
+								<br>
 								&nbsp;&nbsp;<small>Line 3</small>&nbsp;<input type='text' name='Address3' size='100' <?php if (!empty($_POST['Address3'])) { ?>value="<?php echo $_POST['Address3'];?>"<?php } ?>/>
-								<br/>
+								<br>
 								&nbsp;&nbsp;<small>Line 4</small>&nbsp;<input type='text' name='Address4' size='100' <?php if (!empty($_POST['Address4'])) { ?>value="<?php echo $_POST['Address4'];?>"<?php } ?>/>
-								<br/>
+								<br>
 								&nbsp;&nbsp;<small>Post Code</small>
 								&nbsp;&nbsp;<input type='text' name='PostCode' <?php if (!empty($_POST['PostCode'])) { ?>value="<?php echo $_POST['PostCode'];?>"<?php } ?>/>
-								<br/>
+								<br>
 		<b>Phone Number</b>&nbsp;
 								&nbsp;&nbsp;<input type='text' name='PhoneNum' <?php if (!empty($_POST['PhoneNum'])) { ?>value="<?php echo $_POST['PhoneNum'];?>"<?php } ?>/>
-							<br/>
+							<br>
 		<b>Email</b>&nbsp;	<input type='email' name='Email' <?php if (!empty($_POST['Email'])) { ?>value="<?php echo $_POST['Email'];?>"<?php } ?>/>
-							<br/>
-							<br/>
+							<br>
+							<br>
 								<p>Use date format YYYY-MM-DD</p>
-		<b>Date</b>&nbsp;<input type='date' name='Date' /><br/>
+		<b>Date</b>&nbsp;<input type='date' name='Date' /><br>
 		<b>Start Time</b>&nbsp;<select name='TimeStart'>
 							<option value="">-- Please Choose</option>
 							<option <?php if (!empty($_POST['TimeStart']) && ($_POST["TimeStart"] == "09:00")) { ?>selected="true"<?php } ?>value='09:00'>09:00</option>
@@ -195,7 +195,7 @@
 							<option <?php if (!empty($_POST['TimeStart']) && ($_POST["TimeStart"] == "22:00")) { ?>selected="true"<?php } ?>value='22:00'>22:00</option>
 							<option <?php if (!empty($_POST['TimeStart']) && ($_POST["TimeStart"] == "22:30")) { ?>selected="true"<?php } ?>value='22:30'>22:30</option>
 						</select>
-						<br/>					
+						<br>					
 		<b>Finish Time</b>&nbsp;<select name='TimeFinish'>
 							<option value="">-- Please Choose</option>
 							<option <?php if (!empty($_POST['TimeFinish']) && ($_POST["TimeFinish"] == "09:00")) { ?>selected="true"<?php } ?>value='09:00'>09:00</option>
@@ -227,18 +227,18 @@
 							<option <?php if (!empty($_POST['TimeFinish']) && ($_POST["TimeFinish"] == "22:00")) { ?>selected="true"<?php } ?>value='22:00'>22:00</option>
 							<option <?php if (!empty($_POST['TimeFinish']) && ($_POST["TimeFinish"] == "22:30")) { ?>selected="true"<?php } ?>value='22:30'>22:30</option>
 						</select>
-						<br/>
-		<b>Type of Booking</b>&nbsp;	<br/>
+						<br>
+		<b>Type of Booking</b>&nbsp;	<br>
 								&nbsp;&nbsp;<input type='radio' name='BookingType' value='One-off' ><small><b>One-off Event</b></small>
-								<br/>
+								<br>
 								&nbsp;&nbsp;<input type='radio' name='BookingType' value='Weekly' ><small><b>Weekly Event</b></small>
-								<br/>
+								<br>
 								&nbsp;&nbsp;<input type='radio' name='BookingType' value='Monthly' ><small><b>Monthly Event</b></small>
-								<br/>
+								<br>
 		<b>Rooms</b>&nbsp;	<select name='Rooms'>
 								<option <?php if (!empty($_POST['Rooms']) && ($_POST["Rooms"] == "Hall")) { ?>selected="true"<?php } ?>value='Hall'>Hall</option>
 							</select>
-							<br/>
+							<br>
 								<!---
 							
 								<option value='Main Hall'>Main Hall</option>
@@ -246,8 +246,8 @@
 								<option value=''></option>
 								
 								--->
-		<b>Equipment</b>&nbsp;<br/><input type='text' id='EquipmentNotes' name='EquipmentNotes'  size='100' value=''><br/>
-								<input type='checkbox' name='EquipNotesNo' value='NoEquip'>I do not need any extra equipment.<br/><br/>
+		<b>Equipment</b>&nbsp;<br><input type='text' id='EquipmentNotes' name='EquipmentNotes'  size='100' value=''><br>
+								<input type='checkbox' name='EquipNotesNo' value='NoEquip'>I do not need any extra equipment.<br><br>
 		
 		
 		<input type='hidden' name='submitted' value='true' />
