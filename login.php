@@ -6,8 +6,8 @@
 	$error = '';
 	
 	if(isset($_POST['submitted'])) {
-	$Username=mysqli_real_escape_string($db, trim($_POST['Username']));
-	$password=mysqli_real_escape_string($db, trim($_POST['password']));
+	$Username=mysqli_real_esc_str_trim('Username');
+	$password=mysqli_real_esc_str_trim('password');
 	
 	if(!empty($Username) && !empty($password)){
 	$result = mysqli_query($db,"select * from users where name ='$Username' and password = MD5('$password')");

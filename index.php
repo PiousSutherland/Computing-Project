@@ -11,7 +11,7 @@
 	}
 
 	$currentDate = date('Y-m-d');
-	$CalDate = mysqli_real_escape_string($db, $currentDate);
+	$CalDate = mysqli_real_esc_str_trim($currentDate);
 	//echo $CalDate, PHP_EOL;
 	
 	if(isset($_POST['submitted'])) {

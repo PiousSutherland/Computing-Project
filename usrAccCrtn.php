@@ -6,10 +6,10 @@
 	$error = '';
 	
 	if(isset($_POST['submitted'])) {
-		$Username=mysqli_real_esc_str('Username');
-		$Surname=mysqli_real_esc_str('Surname');
-		$email=mysqli_real_esc_str('email');		
-		$password=mysqli_real_esc_str('password');
+		$Username=mysqli_real_esc_str_trim('Username');
+		$Surname=mysqli_real_esc_str_trim('Surname');
+		$email=mysqli_real_esc_str_trim('email');		
+		$password=mysqli_real_esc_str_trim('password');
 		
 		if(!empty($Username) && !empty($Surname) && !empty($email) && !empty($password)){
 			$result = mysqli_query($db,"insert into `users` set `name` ='$Username', `surname` ='$Surname', `email`='$email', `password` = MD5('$password') ");
